@@ -92,11 +92,11 @@ describe("Calculator", () => {
     
   })
     
-  it('should output infinity if there is a division by zero', () => {
+  it('should output Math error if there is a division by zero', () => {
     cy.get('#number1').click();
     cy.get('#operator-divide').click();
     cy.get('#number0').click();
     cy.get('#operator-equals').click();
-    cy.get('.display').should('contain', 'Infinity')
+    cy.get('.display').should('contain', 'Math Error')
   })
 })
